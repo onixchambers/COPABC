@@ -1,0 +1,16 @@
+{
+  "name": "AERO BASS - Gestión de Pasajeros",
+  "short_name": "AERO BASS",
+  "description": "Sistema de Gestión de Pasajeros, Vuelo y Tiempos - AERO BASS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#061224",
+  "theme_color": "#0c2340",
+  "icons": [
+    {
+      "src": "AERO_BASS.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}
