@@ -1,9 +1,15 @@
-const CACHE_NAME = 'aerobass-cache-v1';
+const CACHE_NAME = 'aerobass-cache-v2';
 const urlsToCache = [
   './',
   './index.html',
   './BC23.0BASS.html',
   './AERO_BASS.png',
+  './favicon.png',
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-192.png',
+  './icon-maskable-512.png',
+  './apple-touch-icon.png',
   './manifest.json'
 ];
 
