@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestión de Pasajeros - Vuelo</title>
+<title>AeroBas3.0</title>
 <meta name="theme-color" content="#0c2340">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="AERO BASS">
+<meta name="apple-mobile-web-app-title" content="AeroBas3.0">
+<meta name="application-name" content="AeroBas3.0">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
@@ -2799,15 +2800,15 @@ async function exportAs(format) {
   closeLightbox(); closeModal();
   const element = document.getElementById('app-content');
   const canvas = await html2canvas(element, { backgroundColor: '#061224', scale: 2, useCORS: true, logging: false });
-  if(format === 'jpg') { const a = document.createElement('a'); a.download = 'pasajeros_' + new Date().toISOString().slice(0,10) + '.jpg'; a.href = canvas.toDataURL('image/jpeg', 0.95); a.click(); }
-  else if(format === 'png') { const a = document.createElement('a'); a.download = 'pasajeros_' + new Date().toISOString().slice(0,10) + '.png'; a.href = canvas.toDataURL('image/png'); a.click(); }
+  if(format === 'jpg') { const a = document.createElement('a'); a.download = 'AeroBas3.0_' + new Date().toISOString().slice(0,10) + '.jpg'; a.href = canvas.toDataURL('image/jpeg', 0.95); a.click(); }
+  else if(format === 'png') { const a = document.createElement('a'); a.download = 'AeroBas3.0_' + new Date().toISOString().slice(0,10) + '.png'; a.href = canvas.toDataURL('image/png'); a.click(); }
   else if(format === 'pdf') {
     const { jsPDF } = window.jspdf; const imgData = canvas.toDataURL('image/jpeg', 0.95);
     const imgWidth = 210; const pageHeight = 297; const imgHeight = (canvas.height * imgWidth) / canvas.width;
     const pdf = new jsPDF('p', 'mm', 'a4'); let heightLeft = imgHeight; let position = 0;
     pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight); heightLeft -= pageHeight;
     while(heightLeft > 0) { position = heightLeft - imgHeight; pdf.addPage(); pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight); heightLeft -= pageHeight; }
-    pdf.save('pasajeros_' + new Date().toISOString().slice(0,10) + '.pdf');
+    pdf.save('AeroBas3.0_' + new Date().toISOString().slice(0,10) + '.pdf');
   }
 }
 
